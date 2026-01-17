@@ -2,6 +2,7 @@
 
 :root {
   --font-family: "Science Gothic", sans-serif;
+  --accent-color: #efe9dd;
 }
 
 body {
@@ -24,7 +25,159 @@ body {
 .container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 15px;
+  padding: 0 15px;
   height: 100%;
 }
 
+/* ============= header ============= */
+
+.header__nav {
+  background: url("./../img/header_bg.jpg") no-repeat center center / cover; 
+  max-height: 136px;
+  color: var(--accent-color);
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+}
+.header__list {
+  height: 136px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+}
+
+.header__item:nth-child(2) .header__link::before {
+  content: "";
+  display: block;
+  width: 51px;
+  height: 51px;
+  background-image: url("./../img/icons/star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; /* или cover, в зависимости от задачи */
+}
+
+.hero {
+  position: relative;
+}
+.hero::before {
+  content: "";
+  background: #00000070;
+  position: absolute;
+  inset: 0;
+}
+
+.header__hero {
+  height: 800px;
+}
+.hero__title {
+  display: block;
+  max-width: 645px;
+  font-size: 35px;
+  text-align: right;
+  color: var(--accent-color);
+  position: absolute;
+  right: 2%;
+  top: 35%;
+}
+
+/* ========================================= */
+/* ========================================= */
+/* =============== media =================== */
+/* ========================================= */
+/* ========================================= */
+
+@media (max-width: 1000px) {
+  /* ------ gloabal ------- */
+
+
+  
+  /* ------ header ------- */
+  
+    .hero{
+    height: 700px;
+  }
+  .header__link{
+    font-size: 23px;
+  }
+
+  .hero__title{
+    font-size: 32px;
+  }
+
+  .header__list{
+    height: 110px;
+  }
+
+  .header__item:nth-child(2) .header__link::before{
+    width: 45px;
+    height: 45px;
+  }
+}
+
+
+@media (max-width: 800px) {
+  /* ------ gloabal ------- */
+
+
+
+  /* ------ header ------- */
+
+    .hero{
+    height: 600px;
+  }
+  .header__link{
+    font-size: 20px;
+  }
+
+  .hero__title{
+    font-size: 27px;
+    max-width: 500px;
+  }
+
+  .header__list{
+    gap: 50px;
+    height: 110px;
+  }
+
+  .header__item:nth-child(2) .header__link::before{
+    width: 40px;
+    height: 40px;
+  }
+  
+}
+
+@media (max-width: 600px) {
+  /* ------ gloabal ------- */
+
+
+
+  /* ------ header ------- */
+
+  .hero{
+    height: 500px;
+  }
+  .header__link{
+    font-size: 18px;
+  }
+
+  .hero__title{
+    padding: 0 15px;
+      top: 30%;
+    right: 0px;
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .header__list{
+    gap: 30px;
+    height: 80px;
+  }
+
+  .header__item:nth-child(2) .header__link::before{
+    width: 35px;
+    height: 35px;
+  }
+  
+}
