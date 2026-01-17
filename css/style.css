@@ -25,7 +25,7 @@ body {
 .container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 20px;
   height: 100%;
 }
 
@@ -55,7 +55,7 @@ body {
   background-image: url("./../img/icons/star.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain; /* или cover, в зависимости от задачи */
+  background-size: contain; 
 }
 
 .hero {
@@ -82,11 +82,93 @@ body {
   top: 35%;
 }
 
+
+
+/* ============= about ============= */
+
+.main__about {
+  margin-top: 100px;
+}
+.about {
+}
+.container {
+}
+.about__title {
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 70px;
+}
+.about__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.about__content {
+  max-width: 540px;
+  text-align: justify;
+}
+.about__img {
+  position: relative;
+  max-width: 580px;
+}
+.about__img::before, .about__img::after {
+  content: "";
+  background-image: url("./../img/about/stars.svg");
+  width: 300px;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; 
+  position: absolute;
+  z-index: 0;
+}
+.about__img::before {
+  top: -32%;
+  right: -20%;
+}
+.about__img::after {
+  bottom: -45%;
+  left: -5%;
+}
+.about__img img{
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  object-fit: cover;
+}
+
 /* ========================================= */
 /* ========================================= */
 /* =============== media =================== */
 /* ========================================= */
 /* ========================================= */
+
+@media (max-width: 1200px) {
+
+  /* ------ about -------- */
+  .about__img::before, .about__img::after{
+      width: 250px;
+      height: 250px;
+  }
+
+  .about__img{
+    min-width: 450px;
+  }
+
+  .about__img::before {
+  top: -24%;
+  right: -17%;
+}
+.about__img::after {
+  bottom: -45%;
+  left: -5%;
+}
+
+.about__content{
+  font-size: 22px;
+}
+}
 
 @media (max-width: 1000px) {
   /* ------ gloabal ------- */
@@ -114,6 +196,31 @@ body {
     width: 45px;
     height: 45px;
   }
+
+
+  /* ------ about -------- */
+
+  .about__inner{
+    flex-direction: column;
+  }
+  .about__img::before, .about__img::after{
+      width: 200px;
+      height: 200px;
+  }
+
+.about__img::after {
+      bottom: -35%;
+      left: -5%;
+  }
+
+  .about__img::before {
+        top: -20%;
+        right: -15%;
+    }
+
+    .about__content{
+      max-width: 580px;
+    }
 }
 
 
@@ -145,14 +252,20 @@ body {
     width: 40px;
     height: 40px;
   }
+
+  /* ----- about -------- */
+
+  .about__inner{
+    padding: 0 20px;
+  }
   
 }
 
 @media (max-width: 600px) {
   /* ------ gloabal ------- */
-
-
-
+  .main__about {
+    margin-top: 70px;
+}
   /* ------ header ------- */
 
   .hero{
@@ -179,5 +292,58 @@ body {
     width: 35px;
     height: 35px;
   }
+
+  /* ----- about ------ */
+  .about__content{
+    font-size: 18px;
+  }
+
+  .about__title{
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
+
+  .about__img::before, .about__img::after {
+        width: 150px;
+        height: 150px;
+    }
+
+.about__img::before {
+        top: -17%;
+        right: -12%;
+    }
+
+        .about__img::after {
+        bottom: -30%;
+        left: -3%;
+    }
+
+      .about__inner{
+    padding: 0px;
+  }
+
+      .about__img {
+        min-width: 320px;
+    }
   
+}
+
+
+
+@media (max-width: 400px){
+
+  .about__img::before, .about__img::after {
+        width: 120px;
+        height: 120px;
+    }
+
+.about__img::before {
+        top: -22%;
+        right: -12%;
+    }
+    .about__img::after {
+        bottom: -32%;
+        left: -3%;
+    }
+
 }
