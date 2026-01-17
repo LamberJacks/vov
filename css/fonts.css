@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Science Gothic';
+    src: local('Science Gothic Regular'), local('ScienceGothic-Regular'),
+        url('./../fonts/ScienceGothic-Regular.woff2') format('woff2'),
+        url('./../fonts/ScienceGothic-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Science Gothic';
+    src: local('Science Gothic Light'), local('ScienceGothic-Light'),
+        url('./../fonts/ScienceGothic-Light.woff2') format('woff2'),
+        url('./../fonts/ScienceGothic-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
