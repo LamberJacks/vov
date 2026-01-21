@@ -146,7 +146,7 @@ body {
   margin-top: 100px;
 }
 
-/* ---- select ------ */
+/* ---- select/hero ------ */
 .year-select {
   position: relative;
   width: 160px;
@@ -227,8 +227,6 @@ body {
   font-weight: 300;
 }
 
-/* --------------- */
-
 .year__content{
   display: none;
 }
@@ -260,6 +258,95 @@ body {
   align-items: center;
   gap: 35px;
 }
+
+/* ---- events ----- */
+
+.year__events {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 140px;
+}
+.year__events-title {
+  font-size: 35px;
+  text-align: center;
+}
+
+.year__path{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  padding-left: 210px;
+  padding-right: 85px;
+}
+.year__path-img {
+  max-width: 716px;
+  width: 100%;
+}
+.year__list {
+}
+.year__item {
+  position: absolute;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height:160px;
+}
+
+/* --- эдементы увеличивающиеся вниз ---- */
+.year__item:nth-child(4), .year__item:nth-child(1), .year__item:nth-child(7){
+  display: block;
+  height: fit-content;
+}
+
+/* --- позиционирование текста над звездочками ----- */
+
+.year__item:nth-child(1){
+  top: 30px;
+  left: 0px
+}
+.year__item:nth-child(2){
+    top: -135px;
+    left: 31%;
+    max-width: 250px;
+}
+.year__item:nth-child(3){
+  top: -75px;
+  left: 62%;
+  max-width: 250px;
+}
+.year__item:nth-child(4){
+  top: 50%;
+  left: 67%;
+  max-width: 290px;
+}
+.year__item:nth-child(5){
+    top: calc(35% - 89px);
+    left: 30%;
+    max-width: 290px;
+}
+
+.year__item:nth-child(6){
+    top: calc(72% - 89px);
+    left: 32%;
+    max-width: 290px;
+}
+
+.year__item:nth-child(7){
+  top: 92%;
+  left: 72.5%;
+}
+
+.year__item-img--mobile{
+  display: none;
+}
+
+
+
+
 
 
 /* ========================================= */
@@ -377,6 +464,51 @@ body {
     padding: 90px;
   }
 
+  .year__path{
+    padding-left: 110px;
+    padding-right: 35px;
+  }
+
+  .year__item{
+    font-size: 22px;
+    height: 150px;
+  }
+
+
+/* --- позиционирование текста над звездочками ----- */
+.year__item:nth-child(1){
+  top: 12px;
+  left: -12px;
+  max-width: 150px;
+}
+.year__item:nth-child(2){
+    top: -127px;
+    left: 29%;
+}
+.year__item:nth-child(3){
+        top: -80px;
+        left: 62%;
+}
+
+.year__item:nth-child(5){
+        top: 20%;
+        left: 22%;
+    max-width: 290px;
+}
+
+.year__item:nth-child(6){
+top: 60%;
+        left: 28%;
+    max-width: 290px;
+}
+
+.year__item:nth-child(7){
+  top: 89%;
+  left: 72.5%;
+    max-width: 150px;
+}
+
+
 }
 
 
@@ -415,8 +547,27 @@ body {
     padding: 0 20px;
   }
 
+  .about__content{
+    font-size: 20px;
+  }
+
+  .about__title{
+    font-size: 30px;
+    margin-bottom: 50px;
+
+  }
+
 
   /* ---- year ------ */
+
+  .year__events{
+    gap: 100px;
+    margin-top: 80px;
+  }
+
+  .year__events-title{
+    font-size: 30px;
+  }
 
   .year-select__item a {
     padding: 5px 10px;
@@ -430,6 +581,52 @@ body {
   .year__img{
     padding: 50px;
   }
+
+
+  .year__item{
+    font-size: 18px;
+    height: 115px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .year__path{
+    padding-left: 70px;
+    padding-right: 0px;
+  }
+
+  /* --- позиционирование текста над звездочками ----- */
+.year__item:nth-child(1){
+    top: 8px;
+    left: -28px;
+    max-width: 120px;
+}
+.year__item:nth-child(2){
+    top:-90px;
+    left: 25%;
+    max-width: 180px;
+}
+.year__item:nth-child(3){
+  top: -50px;
+  left: 59%;
+}
+
+.year__item:nth-child(5){
+    top: 22%;
+    left: 20%;
+    max-width: 249px;
+}
+
+.year__item:nth-child(6){
+    top: calc(64% - 2vw);
+    left: 24%;
+    max-width: 290px;
+}
+
+.year__item:nth-child(7){
+  top: 92%;
+  left: 72.5%;
+}
   
 }
 
@@ -470,10 +667,12 @@ body {
     font-size: 18px;
   }
 
-  .about__title{
-    font-size: 30px;
-    margin-bottom: 50px;
+  .about__title {
+    font-size: 27px;
+    margin-bottom: 35px;
   }
+
+  
 
   .about__img::before, .about__img::after {
         width: 150px;
@@ -501,6 +700,15 @@ body {
 
     /* ---- year ----- */
 
+    .year__events{
+      margin-top: 70px;
+      gap: 40px;
+    }
+
+    .year__events-title {
+    font-size: 27px;
+}
+
     .year__control-inner {
     gap: 10px;
 }
@@ -527,6 +735,42 @@ body {
   width: fit-content;
   left: 17%;
 }
+
+.year__item-img--mobile{
+  display: block;
+  max-width: 30px;
+  transform: rotate(40deg);
+}
+.year__path{
+  padding: 0px;
+}
+.year__path-img{
+  display: none;
+}
+
+.year__list{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.year__list li.year__item{
+  position: static;
+  height: fit-content;
+  width: 100%;
+  max-width: none;
+  text-align: center;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  border: 2px solid #8D0307;
+  border-radius: 10px;
+  padding: 7px;
+} 
 }
 
 
@@ -549,6 +793,11 @@ body {
 
         .about__content {
         font-size: 16px;
+    }
+
+
+    .year__item{
+      font-size: 15px;
     }
 
 }
