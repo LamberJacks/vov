@@ -3,6 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Базовые теги -->
+  <meta name="description" content="Интерактивная хроника ВОВ 1941-1945: ключевые события и факты. Биографические записки, история спецподразделений и анализ современного правосудия.">
+
+  <!-- Open Graph (для соцсетей) -->
+  <meta property="og:title" content="Великая Отечественная Война: Никто не забыт, ничто не забыто!">
+  <meta property="og:description" content="Хронология войны по годам, история органов госбезопасности и биографические очерки участников ВОВ.">
+  <meta property="og:image" content="./img/hero-bg.jpg"> <!-- Ссылка на общее фото -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+
+  <!-- Микроразметка (JSON-LD) для главной -->
+  <script type="application/ld+json">
+  {
+    "@context": "",
+    "@type": "WebSite",
+    "name": "Архив ВОВ и правосудия",
+    "description": "Сайт с историческими заметками о ВОВ и научными статьями по уголовному праву",
+    "url": ""
+  }
+  </script>
+
   <title>Живая История</title>
   <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
   <link rel="stylesheet" href="./css/reset.css">
@@ -43,6 +64,57 @@
             <div class="about__img"><img src="./img/about/img.jpg" alt="танковый полк" ></div>
           </div>
         </div>
+      </section>
+      <section class="year main__year">
+        <div class="year__control">
+          <div class="container">
+            <div class="year__control-inner">
+              <span class="year__control-text">Выберите год</span>
+              <div class="year-select" id="yearSelect">
+              <button class="year-select__toggle" type="button">
+                <span class="year-select__label">1941 г.</span>
+                <span class="year-select__arrow"></span>
+              </button>
+  
+              <ul class="year-select__menu">
+                <li class="year-select__item active" data-year="1941" ><a href="#1941">1941 г</a></li>
+                <li class="year-select__item" data-year="1942" ><a href="#1942">1942 г</a></li>
+                <li class="year-select__item" data-year="1943" ><a href="#1943">1943 г</a></li>
+                <li class="year-select__item" data-year="1944" ><a href="#1944">1944 г</a></li>
+                <li class="year-select__item" data-year="1945" ><a href="#1945">1945 г</a></li>
+              </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+          <article id="1941" class="year__content year__content--show">
+            <div class="year__hero" style="background: url('./img/year/hero-bg.jpg') no-repeat center center / cover;">
+              <div class="container"><img src="./img/year/1941.svg" aria-label="1941" alt="большое число (год) 1941" class="year__img"></div>
+            </div>
+
+            <div class="container">
+              <div class="year__events">
+                <h2 class="year__events-title">Ключевые события</h2>
+                <img src="./img/year/path.svg" alt="" class="year__path">
+                <ul class="year__list">
+                  <li class="year__item">Начало Войны</li>
+                  <li class="year__item">Смоленское сражение</li>
+                  <li class="year__item">Начало блокады Ленинграда</li>
+                  <li class="year__item">Начало Одесской оборонительной операции</li>
+                  <li class="year__item">Начало операции «Тайфун»</li>
+                  <li class="year__item">Контрнаступление под Москвой</li>
+                  <li class="year__item">Война на Востоке</li>
+                </ul>
+              </div>
+              <div class="year__fact">
+                <h2 class="year__fact-title">Интересные факты</h2>
+                <ul class="year__grid">
+                  <li class="year__card"></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
       </section>
     </main>
     <br><br><br><br><br><br><br>
