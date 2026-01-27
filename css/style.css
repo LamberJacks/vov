@@ -397,6 +397,7 @@ body {
 /* ====== footer ========= */
 
 .footer {
+  margin-top: 100px;
   background: url("./../img/header_bg.jpg") no-repeat center center / cover;
   color: var(--accent-color);
   font-weight: 300;
@@ -934,7 +935,7 @@ top: 60%;
 /* ---- footer ------ */
 
 .footer{
-  margin-top: -250px;
+  margin-top: -50px;
 }
 
 .footer__inner{
@@ -947,9 +948,7 @@ top: 60%;
   text-align: center;
 }
 
-
 }
-
 
 
 @media (max-width: 400px){
