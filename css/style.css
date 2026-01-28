@@ -19,7 +19,7 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .container {
@@ -32,6 +32,8 @@ body {
 .container--width{
   width: 100%;
 }
+
+
 
 /* ============= header ============= */
 
