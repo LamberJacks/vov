@@ -102,6 +102,22 @@
 
 @media (max-width: 600px) {
 
+  .author, .footer {
+    margin-top: 70px;
+}
+
+.author__inner {
+    gap: 70px;
+}
+
+.author__date {
+    margin-bottom: 25px;
+}
+
+    .author__name {
+        margin-bottom: 30px;
+    }
+
       .author__date, .author__descr {
         font-size: 16px;
       }
