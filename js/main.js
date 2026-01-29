@@ -5,11 +5,13 @@
   const items = select.querySelectorAll('.year-select__item');
   const contents = document.querySelectorAll('.year__content');
 
-  toggle.addEventListener('click', () => {
+
+    toggle.addEventListener('click', () => {
     select.classList.toggle('open');
   });
 
   items.forEach(item => {
+
     item.addEventListener('click', (e) => {
       e.preventDefault();
 
@@ -41,5 +43,7 @@
       select.classList.remove('open');
     }
   });
+
+
 })();
 
